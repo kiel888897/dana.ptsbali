@@ -1,6 +1,12 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: login.php");
+    exit;
+}
 // index.php
-require_once 'config.php';
+require_once '../config.php';
 // Ambil daftar anggota dari database
 $stmt = $pdo->query("SELECT id, nama FROM anggota ORDER BY nama ASC");
 $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -26,7 +32,6 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <!-- Gambar Baju -->
                         <div class="text-center mb-4">
                             <h3 class="card-title mb-3">Form Pemesanan Baju PTS</h3>
-                            <img src="1.png" alt="Desain Baju PTS" class="img-fluid rounded shadow-sm" style="max-width: 300px;">
                         </div>
 
                         <form id="orderForm" method="post" action="process.php">
@@ -68,7 +73,7 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="mb-3 form-text" id="errorText" style="color:#b02a37; display:none;">Masukkan minimal 1 qty untuk salah satu ukuran.</div>
 
                             <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
-                            <a href="orders.php" class="btn btn-outline-secondary ms-2">Lihat Pesanan</a>
+                            <a href="index.php" class="btn btn-outline-secondary ms-2">Lihat Pesanan</a>
 
                         </form>
 
@@ -76,7 +81,7 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="mt-3 text-muted small">
-                    Note: Sistem akan menyimpan hanya ukuran yang qty > 0. Ukuran dapat diubah oleh panitia.
+                    Note: Sistem akan menyimpan hanya ukuran yang qty > 0. Ukuran dapat diubah oleh admin.
                 </div>
             </div>
         </div>
