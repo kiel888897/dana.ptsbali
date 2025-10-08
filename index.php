@@ -82,8 +82,17 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="card shadow-sm p-4">
-                    <div class="text-center mb-4">
-                        <h3 class="card-title mb-3">Form Pemesanan Baju PTS</h3>
+                    <div class="text-center mb-3">
+                        <h3 class="fw-bold text-uppercase mb-2" style="letter-spacing: 1px; color: #007bff;">
+                            👕 Form Pemesanan Baju PTS 👕
+                        </h3>
+                        <p class="fst-italic fw-semibold mb-0" style="font-size: 1.1rem; color: #555;">
+                            “Unang lupa baju seragam, nanti disangka <span style='color:#ff5722;'>mar-geng lain do!</span>” 😎
+                        </p>
+
+                    </div>
+
+                    <div class="text-center mb-3">
                         <img src="1.png" alt="Desain Baju PTS" class="img-fluid rounded shadow-sm" style="max-width: 300px;">
                     </div>
 
@@ -102,9 +111,9 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <form id="orderForm" method="post" action="process.php">
 
                         <div class="mb-3">
-                            <label for="customer_name_select" class="form-label">Nama Anggota</label>
+                            <label for="customer_name_select" class="form-label">Nama </label>
                             <select class="form-select" id="customer_name_select" name="customer_name_select" required>
-                                <option value="" disabled selected>Pilih nama anggota...</option>
+                                <option value="" disabled selected>Pilih nama...</option>
                                 <?php foreach ($anggota_list as $a): ?>
                                     <option value="<?= htmlspecialchars($a['nama']) ?>"><?= htmlspecialchars($a['nama']) ?></option>
                                 <?php endforeach; ?>

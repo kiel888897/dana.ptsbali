@@ -102,9 +102,9 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <form id="orderForm" method="post" action="process.php">
 
                         <div class="mb-3">
-                            <label for="customer_name_select" class="form-label">Nama Anggota</label>
+                            <label for="customer_name_select" class="form-label">Nama</label>
                             <select class="form-select" id="customer_name_select" name="customer_name_select" required>
-                                <option value="" disabled selected>Pilih nama anggota...</option>
+                                <option value="" disabled selected>Pilih nama ...</option>
                                 <?php foreach ($anggota_list as $a): ?>
                                     <option value="<?= htmlspecialchars($a['nama']) ?>"><?= htmlspecialchars($a['nama']) ?></option>
                                 <?php endforeach; ?>
