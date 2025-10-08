@@ -88,12 +88,13 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
                     <div class="text-center mb-3">
-                        <h3 class="fw-bold text-uppercase mb-2" style="letter-spacing: 1px; color: #007b83;">
-
-                            <i class="fa-solid fa-shirt" style="color:#007b83;"></i>
-                            Form Pemesanan Baju PTS
-                            <i class="fa-solid fa-shirt" style="color:#007b83;"></i>
+                        <h3 class="fw-bold text-uppercase mb-2 text-center"
+                            style="letter-spacing: 1px; color: #007b83; font-size: clamp(1.2rem, 4vw, 1.8rem);">
+                            <i class="fa-solid fa-shirt me-2" style="color:#007b83;"></i>
+                            Pemesanan Baju PTS
+                            <i class="fa-solid fa-shirt ms-2" style="color:#007b83;"></i>
                         </h3>
+
                         <p class="fst-italic fw-semibold mb-0" style="font-size: 1.1rem; color: #555;">
                             “Unang lupa baju seragam, nanti disangka <span style='color:#ff5722;'>mar-geng lain do!</span>” 😎
                         </p>
