@@ -116,12 +116,13 @@ foreach ($orders as $o) {
                                 ?>
                                 <tr>
                                     <td class="name-col"><?= htmlspecialchars($o['nama']) ?></td>
-                                    <td><?= $o['S'] ?></td>
-                                    <td><?= $o['M'] ?></td>
-                                    <td><?= $o['L'] ?></td>
-                                    <td><?= $o['XL'] ?></td>
-                                    <td><?= $o['XXL'] ?></td>
-                                    <td><?= $total_qty ?></td>
+                                    <td class="<?= $o['S'] > 0 ? 'text-success fw-bold' : '' ?>"><?= $o['S'] ?></td>
+                                    <td class="<?= $o['M'] > 0 ? 'text-success fw-bold' : '' ?>"><?= $o['M'] ?></td>
+                                    <td class="<?= $o['L'] > 0 ? 'text-success fw-bold' : '' ?>"><?= $o['L'] ?></td>
+                                    <td class="<?= $o['XL'] > 0 ? 'text-success fw-bold' : '' ?>"><?= $o['XL'] ?></td>
+                                    <td class="<?= $o['XXL'] > 0 ? 'text-success fw-bold' : '' ?>"><?= $o['XXL'] ?></td>
+                                    <td class="<?= $total_qty > 0 ? 'text-success fw-bold' : '' ?>"><?= $total_qty ?></td>
+
                                     <td><?= number_format($total_harga, 0, ',', '.') ?></td>
                                     <td><?= $o['created_at'] ? date('d M Y H:i', strtotime($o['created_at'])) : '-' ?></td>
                                     <td>
