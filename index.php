@@ -72,11 +72,58 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         </form>
 
+                        <div class="mt-3 text-muted small">
+                            Note: Sistem akan menyimpan hanya ukuran yang qty > 0. Ukuran dapat diubah oleh panitia.
+                        </div>
                     </div>
                 </div>
 
-                <div class="mt-3 text-muted small">
-                    Note: Sistem akan menyimpan hanya ukuran yang qty > 0. Ukuran dapat diubah oleh panitia.
+                <div class="mt-3 table-responsive">
+                    <!-- tabel di sini -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Ukuran</th>
+                                    <th>Lingkar Dada (cm)</th>
+                                    <th>Panjang Baju (cm)</th>
+                                    <th>Lebar Bahu (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>S</strong></td>
+                                    <td>46–48</td>
+                                    <td>66–68</td>
+                                    <td>40–42</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>M</strong></td>
+                                    <td>50–52</td>
+                                    <td>68–70</td>
+                                    <td>42–44</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>L</strong></td>
+                                    <td>54–56</td>
+                                    <td>70–72</td>
+                                    <td>44–46</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XL</strong></td>
+                                    <td>58–60</td>
+                                    <td>72–74</td>
+                                    <td>46–48</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XXL</strong></td>
+                                    <td>62–64</td>
+                                    <td>74–76</td>
+                                    <td>48–50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

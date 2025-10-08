@@ -135,6 +135,7 @@ foreach ($orders as $o) {
                             <?php endforeach; ?>
 
                         <?php endif; ?>
+
                     </tbody>
                 </table>
 
