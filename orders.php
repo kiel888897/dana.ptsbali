@@ -72,12 +72,25 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             ?>
                             <tr>
                                 <td><?= htmlspecialchars($row['nama']) ?></td>
-                                <td class="text-center"><?= $sizes['S'] ?></td>
-                                <td class="text-center"><?= $sizes['M'] ?></td>
-                                <td class="text-center"><?= $sizes['L'] ?></td>
-                                <td class="text-center"><?= $sizes['XL'] ?></td>
-                                <td class="text-center"><?= $sizes['XXL'] ?></td>
-                                <td class="text-center fw-bold"><?= $total_pesanan ?></td>
+                                <td class="text-center <?= $sizes['S'] != 0 ? 'text-success fw-bold' : '' ?>">
+                                    <?= $sizes['S'] ?>
+                                </td>
+                                <td class="text-center <?= $sizes['M'] != 0 ? 'text-success fw-bold' : '' ?>">
+                                    <?= $sizes['M'] ?>
+                                </td>
+                                <td class="text-center <?= $sizes['L'] != 0 ? 'text-success fw-bold' : '' ?>">
+                                    <?= $sizes['L'] ?>
+                                </td>
+                                <td class="text-center <?= $sizes['XL'] != 0 ? 'text-success fw-bold' : '' ?>">
+                                    <?= $sizes['XL'] ?>
+                                </td>
+                                <td class="text-center <?= $sizes['XXL'] != 0 ? 'text-success fw-bold' : '' ?>">
+                                    <?= $sizes['XXL'] ?>
+                                </td>
+                                <td class="text-center fw-bold <?= $total_pesanan != 0 ? 'text-success' : '' ?>">
+                                    <?= $total_pesanan ?>
+                                </td>
+
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -97,7 +110,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 info: false,
                 searching: true,
                 order: [
-                    [6, "asc"]
+                    [1, "asc"]
                 ] // Urut berdasarkan tanggal terbaru
             });
         });
