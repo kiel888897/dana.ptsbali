@@ -84,7 +84,7 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="card shadow-sm p-4">
                     <div class="text-center mb-4">
                         <h3 class="card-title mb-3">Form Pemesanan Baju PTS</h3>
-                        <img src="../1.png" alt="Desain Baju PTS" class="img-fluid rounded shadow-sm" style="max-width: 300px;">
+                        <img src="../2.png" alt="Desain Baju PTS" class="img-fluid rounded shadow-sm" style="max-width: 300px;">
                     </div>
 
                     <div class="info-box mb-3">
