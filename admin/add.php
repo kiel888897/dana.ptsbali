@@ -169,7 +169,7 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <thead>
                                     <tr>
                                         <th>Ukuran</th>
-                                        <th>Lingkar Dada (cm)</th>
+                                        <th>Lebar Dada (cm)</th>
                                         <th>Panjang Baju (cm)</th>
                                         <th>Lebar Bahu (cm)</th>
                                     </tr>
@@ -204,6 +204,12 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <td>62–64</td>
                                         <td>74–76</td>
                                         <td>48–50</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>XXXL</strong></td>
+                                        <td>66–68</td>
+                                        <td>76–78</td>
+                                        <td>50–52</td>
                                     </tr>
                                 </tbody>
                             </table>
