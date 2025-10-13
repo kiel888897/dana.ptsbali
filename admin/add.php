@@ -222,7 +222,7 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <tr>
                                         <th>Ukuran</th>
                                         <th>Umur (tahun)</th>
-                                        <th>Lingkar Dada (cm)</th>
+                                        <th>Lebar Dada (cm)</th>
                                         <th>Panjang Baju (cm)</th>
                                         <th>Lebar Bahu (cm)</th>
                                     </tr>
