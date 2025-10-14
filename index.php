@@ -77,6 +77,13 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
         .btn-primary:hover {
             background-color: #009688;
         }
+
+        footer {
+            background: #f8f9fa;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -181,7 +188,7 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     <!-- Tabel ukuran -->
                     <div class="mt-5">
-                        <h6 class="fw-bold text-center mb-3">Tabel Ukuran Dewasa</h6>
+                        <h6 class="fw-bold text-center text-success mb-3">Tabel Ukuran Dewasa</h6>
                         <div class="table-responsive mb-4">
                             <table class="table table-bordered text-center align-middle">
                                 <thead>
@@ -339,6 +346,12 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
             });
         });
     </script>
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-3 border-top">
+        <p class="mb-0 fw-semibold text-secondary">
+            &copy; 2026 Panitia Bona Taon PTS
+        </p>
+    </footer>
 
 </body>
 

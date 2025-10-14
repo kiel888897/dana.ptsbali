@@ -249,6 +249,13 @@ foreach ($orders as $o) {
             });
         });
     </script>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-3 border-top">
+        <p class="mb-0 fw-semibold text-secondary">
+            &copy; 2026 Panitia Bona Taon PTS
+        </p>
+    </footer>
 </body>
 
 </html>
