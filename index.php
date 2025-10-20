@@ -353,6 +353,19 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </p>
     </footer>
 
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <?php if (isset($_GET['error'])): ?>
+        <script>
+            Swal.fire({
+                icon: 'warning',
+                title: 'Proses ndang jadi',
+                text: 'Nama sudah memesan — hubungi panitia jika ingin merubah.',
+                confirmButtonText: 'OKAY',
+                confirmButtonColor: '#dc3545'
+            });
+        </script>
+    <?php endif; ?>
 </body>
 
 </html>

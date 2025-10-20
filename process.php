@@ -31,7 +31,15 @@ if (!$anggota) {
     // Kalau sudah ada, ambil ID-nya
     $anggota_id = $anggota['id'];
 }
-
+// 🔹 Cek apakah anggota sudah pernah memesan sebelumnya
+$stmtCheck = $pdo->prepare("SELECT COUNT(*) FROM order_items WHERE order_id = ?");
+$stmtCheck->execute([$anggota_id]);
+$already = (int)$stmtCheck->fetchColumn();
+if ($already > 0) {
+    // Redirect kembali ke form dan tunjukkan pesan error di index.php
+    header('Location: index.php?error=1');
+    exit;
+}
 // 🔹 Filter input jumlah baju
 $clean_items = [];
 foreach ($qtys as $size => $q) {

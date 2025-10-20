@@ -1,7 +1,7 @@
 <?php
 // config.php
 $DB_HOST = 'localhost';
-$DB_NAME = 'pts';
+$DB_NAME = 'danapts';
 $DB_USER = 'root';
 $DB_PASS = ''; // isi sesuai password XAMPP (default kosong)
 
