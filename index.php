@@ -113,6 +113,12 @@ $anggota_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <div class="info-box mb-3">
+                        <div class="align-items-end text-end">
+                            <a href="kupon" class="btn btn-primary btn-sm d-inline-flex align-items-center shadow-sm mb-2">
+                                <i class="bi bi-ticket-perforated me-2 fs-5"></i>
+                                Kupon Bajar PTS
+                            </a>
+                        </div>
                         💰 Harga per pcs: <strong>Rp 100.000 (All Size)</strong><br>
 
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
