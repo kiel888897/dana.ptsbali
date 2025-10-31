@@ -41,7 +41,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
 
             body {
-                font-size: 9px;
+                font-size: 12px;
                 margin: 0;
                 padding: 0;
             }
@@ -55,7 +55,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             table {
                 width: 100% !important;
-                font-size: 9px;
+                font-size: 12px;
             }
 
             .card,
