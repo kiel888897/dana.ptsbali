@@ -34,7 +34,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /* Tambahkan / ganti bagian ini di style */
         @media print {
             @page {
-                size: A4 landscape;
+                size: A4 potrait;
                 /* orientasi mendatar */
                 margin: 0.5cm;
                 /* kecilkan margin default browser */
