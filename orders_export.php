@@ -8,7 +8,7 @@ $stmt = $pdo->query("
     FROM anggota o
     LEFT JOIN order_items oi ON o.id = oi.order_id
     GROUP BY o.id
-    ORDER BY o.nama ASC
+    ORDER BY oi.qty DESC
 ");
 $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
