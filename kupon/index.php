@@ -4,7 +4,7 @@ require_once '../config.php';
 // Ambil daftar nama anggota untuk datalist
 $stmt = $pdo->prepare("SELECT nama FROM anggotas ORDER BY nama ASC");
 $stmt->execute();
-$hulas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$namas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Inisialisasi pesan
 $success = '';
@@ -76,16 +76,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <!-- Nama -->
             <div>
-                <label for="hulaNama" class="block text-sm font-medium text-gray-700 mb-1">Pilih / Ketik Nama</label>
-                <input list="hulaList" name="nama" id="hulaNama"
+                <label for="hulaNama" class="block text-sm font-medium text-gray-700 mb-1">
+                    Pilih Nama
+                </label>
+
+                <select name="nama" id="hulaNama"
                     class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none"
-                    placeholder="Pilih atau ketik nama baru" required>
-                <datalist id="hulaList">
-                    <?php foreach ($hulas as $h): ?>
-                        <option value="<?= htmlspecialchars($h['nama']); ?>"></option>
+                    required>
+                    <option value="">-- Pilih Nama --</option>
+                    <?php foreach ($namas as $h): ?>
+                        <option value="<?= htmlspecialchars($h['nama']); ?>">
+                            <?= htmlspecialchars($h['nama']); ?>
+                        </option>
                     <?php endforeach; ?>
-                </datalist>
+                </select>
             </div>
+
 
             <!-- Nomor Kupon -->
             <div>
